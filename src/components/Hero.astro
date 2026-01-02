@@ -2,12 +2,16 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import Pic1 from "../images/elektro-blagi-3.jpeg";
+import Logo from "../images/logo.png";
 ---
 
 <div class="">
   <div
     class="bg-[#0d151d] text-white p-4 py-12 flex flex-col gap-12 rounded-t-2xl">
-    <h1 class="text-5xl font-bold">Electro Blagi</h1>
+    <div class="flex">
+      <Image src={Logo} alt="" class="h-25 w-25" />
+      <h1 class="text-5xl font-bold">Electro Blagi</h1>
+    </div>
     <p class="text-2xl">
       Ugradnja i servis elektroinstalacija, videonadzora, električnih bojlera,
       hitne intervencije...
