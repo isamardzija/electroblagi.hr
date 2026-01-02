@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import Pic1 from "../images/elektro-blagi-3.jpeg";
+---
+
+<div class="">
+  <div
+    class="bg-[#0d151d] text-white p-4 py-12 flex flex-col gap-12 rounded-t-2xl">
+    <h1 class="text-5xl font-bold">Electro Blagi</h1>
+    <p class="text-2xl">
+      Ugradnja i servis elektroinstalacija, videonadzora, električnih bojlera,
+      hitne intervencije...
+    </p>
+    <a
+      href="#contact"
+      class="bg-amber-400 text-gray-900 font-bold text-2xl py-2 px-4 self-start rounded-2xl hover:cursor-pointer">
+      Kontaktirajte nas
+    </a>
+    <a href="+385953965224" class="flex text-3xl gap-2">
+      <Icon name="mdi:call" />
+      <span>095 396 5224</span>
+    </a>
+  </div>
+  <Image src={Pic1} alt="" class="rounded-b-2xl" />
+</div>

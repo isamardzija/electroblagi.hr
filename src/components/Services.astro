@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    icon: "mdi:electricity-circle",
+    title: "Ugradnja i rekonstrukcija elektroinstalacija",
+    description:
+      "Sve vrste elektroinstalacija u novogradnjama i adaptacijama (stanovi, kuće, poslovni prostori)",
+  },
+  {
+    icon: "mdi:carriage-light",
+    title: "Postavljanje rasvjetnih sustava",
+    description:
+      "Unutarnja, vanjska i dekorativna rasvjeta, LED rasvjeta te pametna kontrola svjetala",
+  },
+  {
+    icon: "mdi:home-lightning-bolt-outline",
+    title: "Postavljanje električnih razvodnih ormara",
+    description:
+      "Instalacija automatskih osigurača i zaštitnih uređaja - FID sklopke, prenaponske zaštite...",
+  },
+  {
+    icon: "mdi:cctv",
+    title: "Servisi za videonadzor",
+    description:
+      "Ugradnja i servisiranje videonadzora, portafona i alarmnih sustava, za kućanstvo ili poslovanje",
+  },
+  {
+    icon: "mdi:local-area-network",
+    title: "LAN i telefon",
+    description:
+      "Postavljanje mrežnih i telekomunikacijskih instalacija u uredima i objektima",
+  },
+  {
+    icon: "mdi:car-electric-outline",
+    title: "Punionice električnih vozila",
+    description:
+      "Priprema i montaža instalacija za EV charger - punionice električnih vozila",
+  },
+  {
+    icon: "mdi:home-electricity-outline",
+    title: "...i još puno toga",
+    description:
+      "Servisiranje i ugradnja električnih bojlera, gromobranske instalacije...",
+  },
+];
+---
+
+<div class="space-y-8 text-gray-800">
+  <h2 class="text-4xl font-bold">Naše usluge</h2>
+
+  {
+    services.map((service) => (
+      <div class="bg-gray-300 rounded-2xl p-8 space-y-4">
+        <Icon name={service.icon} class="text-4xl text-gray-900" />
+        <h3 class="text-2xl font-bold text-gray-800">{service.title}</h3>
+        <p class="text-gray-900">{service.description}</p>
+      </div>
+    ))
+  }
+</div>

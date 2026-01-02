@@ -1,0 +1,68 @@
+---
+const faqs = [
+  {
+    question: "Što sve obuhvaćaju elektroinstalacijski radovi?",
+    answer:
+      "Elektroinstalacijski radovi obuhvaćaju instalaciju, održavanje i popravak svih električnih sustava u stambenim i poslovnim objektima. To uključuje postavljanje strujnih instalacija, montažu rasvjetnih tijela, instalaciju utičnica i prekidača, te instalaciju sigurnosnih sustava kao što su alarmi i video nadzori.",
+  },
+  {
+    question:
+      "Kako mogu znati treba li moj električni sustav obnovu ili popravak?",
+    answer:
+      "Ako primijetite čudne mirise, ponekad isključivanje struje, ili neispravne utičnice i prekidače, to mogu biti signali da je potrebno obaviti popravke ili obnovu sustava. Također, ako su vaši računi za električnu energiju znatno veći nego obično, moguće je da instalacija nije u potpunosti učinkovita.",
+  },
+  {
+    question:
+      "Je li sigurno obavljati elektroinstalacijske radove bez profesionalca?",
+    answer:
+      "Ne preporučujemo da sami obavljate elektroinstalacijske radove, jer to može biti opasno. Neispravne instalacije mogu dovesti do strujnih udaraca, požara ili drugih ozbiljnih problema. Za siguran i profesionalan rad, obratite se certificiranim električarima.",
+  },
+  {
+    question: "Koje vrste usluga nudite?",
+    answer:
+      "Naša tvrtka nudi širok spektar elektroinstalacijskih usluga, uključujući montažu i popravak električnih instalacija, instalaciju rasvjetnih sustava, ugradnju sustava za obnovljive izvore energije, popravke i testiranja električnih uređaja, te rješenja za automatizaciju i pametne domove.",
+  },
+  {
+    question: "Kakve jamstva pružate na izvedene radove?",
+    answer:
+      "Na sve naše elektroinstalacijske usluge pružamo jamstvo na kvalitetu izvedenih radova. Jamstvo traje određeni vremenski period, ovisno o vrsti usluge, te uključuje besplatan popravak bilo kojih nedostataka nastalih uslijed naših radnji.",
+  },
+  {
+    question: "Kako mogu zatražiti ponudu za elektroinstalacijske radove?",
+    answer:
+      "Možete nas kontaktirati putem našeg web obrasca, telefonski ili e-mailom. Nakon što prikupimo sve potrebne informacije o vašim potrebama, izradit ćemo detaljnu ponudu i dogovoriti termin za početak radova.",
+  },
+  {
+    question: "Koje su cijene vaših usluga?",
+    answer:
+      "Cijene naših usluga ovise o vrsti i opsegu rada. Za jednostavne popravke cijene su niže, dok se složeniji projekti poput instalacije sustava za obnovljive izvore energije ili pametnih domova cijene prema dogovoru. Za preciznu ponudu, kontaktirajte nas i pošaljite informacije o željenom projektu.",
+  },
+];
+---
+
+<div class="space-y-8 text-gray-800">
+  <h2 class="text-4xl font-bold">Česta pitanja</h2>
+  {
+    faqs.map((faq) => (
+      <details class="group">
+        <summary class="flex items-center cursor-pointer py-3 px-4 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all rounded">
+          <h3 class="font-semibold text-lg">{faq.question}</h3>
+          <svg
+            class="ml-2 w-4 h-4 transform group-open:rotate-180 transition-all"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </summary>
+        <p class="px-4 pb-4 text-gray-600">{faq.answer}</p>
+      </details>
+    ))
+  }
+</div>
