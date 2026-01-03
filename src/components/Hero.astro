@@ -7,24 +7,38 @@ import Logo from "../images/logo.png";
 
 <div class="">
   <div
-    class="bg-[#0d151d] text-white p-4 py-12 flex flex-col items-center align-middle gap-12 rounded-t-2xl">
-    <div class="flex flex-col align-middle items-center">
-      <Image src={Logo} alt="" class="h-25 w-25" />
-      <h1 class="text-5xl font-bold">Electro Blagi</h1>
+    class="bg-linear-to-l bg-[#0d151d] text-white p-4 py-12 flex flex-col items-center align-middle gap-8">
+    <div class="flex flex-col align-middle items-center gap-4">
+      <Image
+        src={Logo}
+        alt="Elektroinstalater u Zagrebu - rasvjetna LED traka u novogradnji"
+        class="h-16 w-16"
+      />
+      <h1 class="text-4xl font-bold text-center">
+        Pouzdan elektroinstalater u Zagrebu
+      </h1>
+
+      <h2 class="text-2xl uppercase text-center text-gray-300 tracking-wider">
+        Electro Blagi
+      </h2>
     </div>
-    <p class="text-2xl text-center">
-      Ugradnja i servis elektroinstalacija, videonadzora, električnih bojlera,
-      hitne intervencije...
-    </p>
+    <ul class="text-xl list-disc p-4 text-gray-300">
+      <li>Elektroinstalacije, adaptacije i popravci</li>
+      <li>Videonadzor, rasvjeta, električni bojleri...</li>
+      <li>Hitne intervencije 0–24 h</li>
+    </ul>
     <a
       href="#contact"
-      class="bg-amber-400 text-gray-900 font-bold text-2xl py-2 px-4 rounded-2xl hover:cursor-pointer">
-      Kontaktirajte nas
+      class="bg-amber-400 text-gray-900 font-bold self-stretch text-2xl py-2 px-4 rounded-2xl hover:cursor-pointer text-center">
+      Nazovite odmah
+      <span class="block text-xl font-normal">095 396 5224</span>
     </a>
-    <a href="+385953965224" class="flex text-3xl gap-2">
+    <!-- <a
+      href="+385953965224"
+      class="flex text-xl self-start items-center text-gray-400">
       <Icon name="mdi:call" />
-      <span>095 396 5224</span>
-    </a>
+      <span class="text-white underline">095 396 5224</span>
+    </a> -->
   </div>
-  <Image src={Pic1} alt="" class="rounded-b-2xl" />
+  <Image src={Pic1} alt="" />
 </div>
