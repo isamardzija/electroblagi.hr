@@ -17,6 +17,24 @@ import CTA from "../components/CTA.astro";
       gtag("js", new Date());
       gtag("config", "AW-17848607419");
     </script>
+    <script is:inline>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url !== "undefined") {
+            window.location = url;
+          }
+        };
+
+        gtag("event", "conversion", {
+          send_to: "AW-17848607419/YpEoCKT6st0bELvF8L5C",
+          event_callback: callback,
+        });
+
+        return false;
+      }
+
+      window.gtag_report_conversion = gtag_report_conversion;
+    </script>
 
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
