@@ -1,10 +1,13 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Services from "../components/Services.astro";
 import FAQ from "../components/FAQ.astro";
+import Reviews from "../components/Reviews.astro";
 import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -47,11 +50,25 @@ import CTA from "../components/CTA.astro";
 "
     />
   </head>
-  <body class="mx-auto sm:max-w-6xl max-w-2xl flex flex-col gap-32">
+  <body class="mx-auto sm:max-w-6xl max-w-2xl flex flex-col">
+    <Navigation />
     <Hero />
     <About />
     <Services />
+    <Reviews
+      reviews={[
+        {
+          name: "Natalija Š",
+          text: "Gospodin Josip vrlo ljubazan i susretljiv već u prvom kontaktu. Bez problema smo dogovorili termin, prilagodio se našim potrebama. Stigao je na vrijeme i odradio dogovoreni posao profesionalno, kvalitetno i uredno. Čak je i pročistio iza radova😊 Bez ikakve sumnje, u slučaju ponovne potrebe, zovemo Electro Blagi! Hvala Josipe!",
+        },
+        {
+          name: "Danica",
+          text: "Kvalitetna izvedba — radovi su odrađeni stručno i precizno, sve je postavljeno kako treba. Baš sam zadovoljna izvedbom",
+        },
+      ]}
+    />
     <FAQ />
     <CTA />
+    <Footer />
   </body>
 </html>

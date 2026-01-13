@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+interface Review {
+  name: string;
+  text: string;
+}
+
+interface Props {
+  reviews: Review[];
+}
+
+const { reviews } = Astro.props;
+---
+
+<section class="bg-gray-50 border-t border-gray-200 py-24 p-4" id="reviews">
+  <div class="mx-auto py-12">
+    <h2 class="text-4xl font-bold text-gray-900 mb-8">Iskustva klijenata</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {
+        reviews.slice(0, 2).map((review) => (
+          <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <div class="flex gap-1 mb-3 text-yellow-500">
+              {Array.from({ length: 5 }).map(() => (
+                <Icon name="mdi:star" class="w-5 h-5" />
+              ))}
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-4">“{review.text}”</p>
+            <div class="font-bold text-gray-900">— {review.name}</div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

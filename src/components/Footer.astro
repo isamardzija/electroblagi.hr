@@ -1,0 +1,41 @@
+---
+const companyName = "Electro Blagi j.d.o.o.";
+const address = "Mlinarska 57, 10000 Zagreb";
+const oib = " 17130937568";
+const phone = "095 396 5224";
+const email = "info@electroblagi.hr";
+---
+
+<footer class="bg-white text-gray-800 border-t border-gray-200 py-24">
+  <div class="max-w-5xl mx-auto px-6 py-8 text-sm">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="space-y-2">
+        <div class="font-semibold text-lg">{companyName}</div>
+        <p>{address}</p>
+        <p>OIB: {oib}</p>
+      </div>
+
+      <div class="space-y-2">
+        <p>
+          <span class="font-medium">Telefon:</span>
+          <br />
+          <a href={`tel:${phone}`} class="text-blue-600 hover:underline">
+            {phone}
+          </a>
+        </p>
+        <p>
+          <span class="font-medium">E-mail:</span>
+          <br />
+          <a href={`mailto:${email}`} class="text-blue-600 hover:underline">
+            {email}
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-xs text-gray-500">
+      © {new Date().getFullYear()}
+      {companyName} Sva prava pridržana.
+    </div>
+  </div>
+</footer>
